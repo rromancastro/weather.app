@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #1e385f;
+    background-color: #8DB0F4;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -89,7 +89,7 @@ main {
 }
 
 #firstSection {
-    background: linear-gradient(115deg, #8DB0F4, #5682D7);
+    background: linear-gradient(135deg, #6D90F0, #4578E0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,7 +98,7 @@ main {
 #principalInfo {
     display: flex;
     width: 100vw;
-    height: 20vh;
+    height: 17vh;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 15px;
@@ -115,9 +115,9 @@ main {
         }
     }
     img {
-        height: 160px;
+        height: 190px;
         padding: 15px;
-        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.616));
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.308));
     }
 }
 
@@ -125,7 +125,7 @@ main {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     padding: 15px;
     width: 100vw;
     overflow-y: hidden;
@@ -137,7 +137,7 @@ main {
         flex-direction: column;
         justify-content: space-between;
         width: 35vw;
-        height: 11vh;
+        height: 12vh;
         flex-shrink: 0; 
         background-color: #3C72DC;
         border: none;
@@ -242,13 +242,4 @@ main {
             }
         }
     }
-}
-
-.lastSection{
-    width: 100vw;
-    height: 29vh;
-    background-image: url('./background.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }

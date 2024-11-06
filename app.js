@@ -18,6 +18,13 @@ let condition = '';
 
 let arrayDay = [];
 
+//DATOS USUARIO
+
+localStorage.setItem('userCity', 'San Luis Argentina');
+
+
+//DATOS USUARIO
+
 function mostrarDatos() { // FUNCION PARA CONSOLE LOG DE DATOS
     console.log(nombreCiudad);
     console.log(nombreProvincia);
@@ -67,13 +74,23 @@ fetch(`http://api.weatherapi.com/v1/forecast.json?key=44feefcbd31645988781724532
     setTimeout(mostrarDatos, 1000);
 }
 
-busquedaDeDatos('San Luis Argentina'); // INICIAR EN SAN LUIS ARGENTINA
-
 // BUSQUEDA DE CIUDADES 
 const buttonSearch = document.getElementById('buttonSearch');
 let userInput = document.getElementById('search');
 
 buttonSearch.onclick = () => {
-    let userInputSearch = userInput.value;
-    busquedaDeDatos(userInputSearch);
+    localStorage.setItem('userCity', userInput.value);
+    busquedaDeDatos(localStorage.getItem('userCity'));
 }
+
+
+let latitud = '';
+let longitud = '';
+
+busquedaDeDatos(localStorage.getItem('userCity')); // INICIAR EN SAN LUIS ARGENTINA
+navigator.geolocation.getCurrentPosition(
+    (position) => {
+        console.log(`Latitud: ${position.coords.latitude}, Longitud: ${position.coords.longitude}`);
+        latitud = position.coords.latitude;
+        longitud = position.coords.longitude;
+    });
