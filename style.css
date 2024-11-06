@@ -72,9 +72,10 @@ nav {
         display: flex;
         align-items: center;
         gap: 5px;
-        line-height: .8;
+        line-height: .4;
+        font-weight: 200;
         svg {
-            width: 20px;
+            width: 18px;
         }
     }
 }
@@ -92,7 +93,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 0 0 15px 15px;
 }
 
 #principalInfo {
@@ -128,7 +128,10 @@ main {
     gap: 15px;
     padding: 15px;
     width: 100vw;
-    overflow-x: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
     .card {
         display: flex;
         flex-direction: column;
@@ -197,7 +200,10 @@ main {
     display: flex;
     align-items: center;
     padding: 15px;
-    overflow-x: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
     gap: 15px;
     .hour {
         width: 17vw;
@@ -236,4 +242,13 @@ main {
             }
         }
     }
+}
+
+.lastSection{
+    width: 100vw;
+    height: 29vh;
+    background-image: url('./background.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
