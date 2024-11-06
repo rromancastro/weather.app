@@ -16,6 +16,8 @@ let indiceUV = 0;
 let probLluvia = 0;
 let condition = '';
 
+let arrayDay = [];
+
 function mostrarDatos() { // FUNCION PARA CONSOLE LOG DE DATOS
     console.log(nombreCiudad);
     console.log(nombreProvincia);
@@ -33,9 +35,11 @@ function mostrarDatos() { // FUNCION PARA CONSOLE LOG DE DATOS
     console.log(indiceUV);
     console.log(probLluvia);
     console.log(condition);
+
+    console.log(arrayDay);
 }
 function busquedaDeDatos(cityName) { // FUNCION PARA BUSCAR CIUDADES
-fetch(`http://api.weatherapi.com/v1/current.json?key=44feefcbd3164598878172453240511&q=${cityName}&aqi=no`)
+fetch(`http://api.weatherapi.com/v1/forecast.json?key=44feefcbd3164598878172453240511&q=${cityName}&aqi=no`)
     .then(response => response.json())
     .then((datos) => {
         console.log(datos);
@@ -45,8 +49,8 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=44feefcbd316459887817245324
         fecha = datos.location.localtime;
 
         tempActual = datos.current.temp_c;
-        tempMin = datos.current.dewpoint_c;
-        tempMax = datos.current.heatindex_c;
+        tempMin = datos.forecast.forecastday[0].day.mintemp_c;
+        tempMax = datos.forecast.forecastday[0].day.maxtemp_c;
         sensTermica = datos.current.feelslike_c;
         humedad = datos.current.humidity;
         lastUpdated = datos.current.last_updated;
@@ -56,8 +60,10 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=44feefcbd316459887817245324
         indiceUV = datos.current.uv;
         probLluvia = datos.current.precip_in;
         condition = datos.current.condition.text;
+
+        arrayDay = datos.forecast.forecastday[0].hour;
     });
-    
+
     setTimeout(mostrarDatos, 1000);
 }
 
@@ -71,4 +77,3 @@ buttonSearch.onclick = () => {
     let userInputSearch = userInput.value;
     busquedaDeDatos(userInputSearch);
 }
-
