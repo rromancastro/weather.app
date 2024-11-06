@@ -26,7 +26,7 @@ nav {
     h3 {
         font-size: 15px;
         font-family: "Roboto", sans-serif;
-        color: #6481bb;
+        color: #29395a;
         margin: 0;
     }
 }
@@ -93,6 +93,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 50vh;
 }
 
 #principalInfo {
@@ -120,6 +121,7 @@ main {
         filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.308));
     }
 }
+
 
 .cards {
     display: flex;
@@ -170,6 +172,10 @@ main {
     }
 }
 
+.secondSection {
+    height: 25vh;
+}
+
 .sponsor {
     background-color: #203c66;
     border-radius: 0 0 15px 15px;
@@ -195,7 +201,6 @@ main {
 
 .hoursTime {
     background-color: #EEF0F4;
-    height: 100%;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -207,7 +212,7 @@ main {
     gap: 15px;
     .hour {
         width: 17vw;
-        height: 15vh;
+        height: 18vh;
         background: linear-gradient(115deg, #D9E5FC, #E9F0FE);
         border-radius: 10px;
         display: flex;
@@ -241,5 +246,50 @@ main {
                 font-size: 10px;
             }
         }
+    }
+}
+
+.aboutMe {
+    width: 100vw;
+    height: 25vh;
+    background-color: #EEF0F4;
+    display: flex;
+    align-items: flex-end;
+    img {
+        width: 55vw;
+        height: 25vh;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45vw;
+        height: 25vh;
+        font-family: "Poppins", sans-serif;
+        color: #424242;
+        font-weight: 400;
+        h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+        h4 {
+            font-size: 15px;
+        }
+        section {
+            flex-direction: s;
+            gap: 5px;
+            align-items: center;
+            a {
+                background-color: #424242;
+                padding: 5px;
+                width: 20px;
+                border-radius: 50%;
+                svg {
+                    width: 20px;
+                    fill: rgb(219, 219, 219);
+                }
+            }
+        }
+        
     }
 }
