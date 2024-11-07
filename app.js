@@ -105,10 +105,9 @@ fetch(`http://api.weatherapi.com/v1/forecast.json?key=44feefcbd31645988781724532
             if(datos.current.cloud > 50) imageFirst = 'algonublado';
             if(datos.current.cloud > 75) imageFirst = 'muynublado';
         }
+        imprimirDatos();
+        mostrarDatos();
     });
-
-    setTimeout(imprimirDatos, 2000);
-    setTimeout(mostrarDatos, 2000);
 }
 
 
