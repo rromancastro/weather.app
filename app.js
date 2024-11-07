@@ -69,7 +69,7 @@ function mostrarDatos() { // FUNCION PARA CONSOLE LOG DE DATOS
     console.log(arrayDay);
 }
 function busquedaDeDatos(cityName) { // FUNCION PARA BUSCAR CIUDADES
-fetch(`http://api.weatherapi.com/v1/forecast.json?key=44feefcbd3164598878172453240511&q=${cityName}&aqi=no`)
+fetch(`https://api.weatherapi.com/v1/forecast.json?key=44feefcbd3164598878172453240511&q=${cityName}&aqi=no`)
     .then(response => response.json())
     .then((datos) => {
         console.log(datos);
