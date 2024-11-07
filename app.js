@@ -88,7 +88,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=44feefcbd3164598878172453
         vientoKMH = Math.ceil(datos.current.wind_kph);
         rafagasViento = Math.ceil(datos.current.gust_kph);
         indiceUV = Math.ceil(datos.current.uv);
-        probLluvia = datos.current.precip_in;
+        probLluvia = datos.forecast.forecastday[0].day.daily_chance_of_rain;
         condition = datos.current.condition.text;
 
         arrayDay = datos.forecast.forecastday[0].hour;
@@ -125,11 +125,11 @@ function imprimirDatos() {
     dateDate.innerText = `${fecha}`;
 
     //INDICES UV
-        if (Number(indiceUV) >= 0 ||  Number(indiceUV) <= 2) indiceUVText.innerText = "Bajo";
-        if (Number(indiceUV) >= 3 ||  Number(indiceUV) <= 5) indiceUVText.innerText = "Moderado";
-        if (Number(indiceUV) >= 6 ||  Number(indiceUV) <= 7) indiceUVText.innerText = "Alto";
-        if (Number(indiceUV) >= 8 ||  Number(indiceUV) <= 10) indiceUVText.innerText = "Muy Alto";
-        if (Number(indiceUV) >= 11 ||  Number(indiceUV) <= 15) indiceUVText.innerText = "Extremo";
+        if (Number(indiceUV) >= 0 &&  Number(indiceUV) <= 2) indiceUVText.innerText = "Bajo";
+        if (Number(indiceUV) >= 3 &&  Number(indiceUV) <= 5) indiceUVText.innerText = "Moderado";
+        if (Number(indiceUV) >= 6 &&  Number(indiceUV) <= 7) indiceUVText.innerText = "Alto";
+        if (Number(indiceUV) >= 8 &&  Number(indiceUV) <= 10) indiceUVText.innerText = "Muy Alto";
+        if (Number(indiceUV) >= 11 &&  Number(indiceUV) <= 15) indiceUVText.innerText = "Extremo";
 
     //TEMP POR HORAS
     for (let i = 0; i < 24; i++) {
