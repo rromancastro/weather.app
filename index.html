@@ -11,7 +11,6 @@
     
     
     <main>
-        
         <section id="firstSection">
             <nav>
                 <h3>Weather</h3>
@@ -21,54 +20,55 @@
                 </div>
             </nav>
             <div class="date">
-                <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>San Luis, Argentina</h3>
-                <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2024/11/04 07:39</h3>
+                <h3 id="cityName">San Luis, San Luis</h3>
+                <h3 id="countryName">Argentina</h3>
+                <h3 id="dateDate">2024/11/04 07:39</h3>
             </div>
             <div id="principalInfo">
-                <h1>23<span>°C</span></h1>
+                <h1><span id="gradosActuales">23</span>°C</h1>
                 <img src="./icons/algonublado.png" alt="">
             </div>
             <div class="cards">
                 <article class="card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-rain"><line x1="16" y1="13" x2="16" y2="21"></line><line x1="8" y1="13" x2="8" y2="21"></line><line x1="12" y1="15" x2="12" y2="23"></line><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path></svg>
                     <div>
-                        <h3>Probabilidad de lluvia</h3>
-                        <h3><span>0</span>%</h3>
+                        <h3>Probability of Precipitation</h3>
+                        <h3><span id="probLluviaTEXT">0</span>%</h3>
                     </div>
                 </article>
                 <article class="card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-droplet"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
                     <div>
-                        <h3>Humedad</h3>
-                        <h3><span>0</span>%</h3>
+                        <h3>Humidity</h3>
+                        <h3><span id="humedadTEXT">0</span>%</h3>
                     </div>
                 </article>
                 <article class="card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
                     <div>
-                        <h3>Viento</h3>
-                        <h3><span>0</span>km/h</h3>
+                        <h3>Wind</h3>
+                        <h3><span id="vientoTEXT">0</span>km/h</h3>
                     </div>
                 </article>
                 <article class="card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
                     <div>
-                        <h3>Ráfagas de Viento</h3>
-                        <h3><span>0</span>km/h</h3>
+                        <h3>Wind Gusts</h3>
+                        <h3><span id="rafagasTEXT">0</span>km/h</h3>
                     </div>
                 </article>
                 <article class="card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <div>
-                        <h3>Índice UV</h3>
-                        <h3><span>0</span>Moderado</h3>
+                        <h3>Index UV</h3>
+                        <h3><span id="indiceTEXT">0</span><em id="indiceUVText">Moderado</em></h3>
                     </div>
                 </article>
                 <article class="card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                     <div>
-                        <h3>Presión</h3>
-                        <h3><span>0</span>hPa</h3>
+                        <h3>Pressure</h3>
+                        <h3><span id="presionTEXT">0</span>hPa</h3>
                     </div>
                 </article>
             </div>
@@ -78,37 +78,12 @@
                 <p>Powered by <a href="https://www.weatherapi.com/" title="Weather API" target="_blank">WeatherAPI.com</a></p>
                 <a href="https://www.weatherapi.com/" title="Free Weather API" target="_blank"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
             </div>
-            <div class="hoursTime">
-                <article class="hour">
+            <div id="hoursTime">
+                <!-- <article class="hour">
                     <h3>00:00</h3>
                     <img src="./icons/moon2.png" alt="">
                     <h4>23<span>°C</span></h4>
-                </article>
-                <article class="hour">
-                    <h3>00:00</h3>
-                    <img src="./icons/moon2.png" alt="">
-                    <h4>23<span>°C</span></h4>
-                </article>
-                <article class="hour">
-                    <h3>00:00</h3>
-                    <img src="./icons/sun.png" alt="">
-                    <h4>23<span>°C</span></h4>
-                </article>
-                <article class="hour">
-                    <h3>00:00</h3>
-                    <img src="./icons/sun.png" alt="">
-                    <h4>23<span>°C</span></h4>
-                </article>
-                <article class="hour">
-                    <h3>00:00</h3>
-                    <img src="./icons/sun.png" alt="">
-                    <h4>23<span>°C</span></h4>
-                </article>
-                <article class="hour">
-                    <h3>00:00</h3>
-                    <img src="./icons/sun.png" alt="">
-                    <h4>23<span>°C</span></h4>
-                </article>
+                </article> -->
             </div>
         </section>
         <section class="aboutMe">
